@@ -21,14 +21,16 @@ void main() {
   // listOperations(doubleValue, (double value) => newdoubleValue.add(value * 2));
   // listOperations(stringValue, (String value) => newstringValue.add(value * 2));
   //Using the generic function
-  genericFunction(doubleValue, (double value) => newdoubleValue.add(value * 2));
+  genericFunction(doubleValue, (double value) => newdoubleValue.add(value * 2));//passing a function as a parameter and the function takes a double as a parameter
   genericFunction(
-      stringValue, (String value) => newstringValue.add((value+ ' ')*2 ));
+      stringValue, (String value) => newstringValue.add((value + ' ') * 2));
   print(newdoubleValue);
   print(newstringValue);
+
+  // listOperations(doubleValue, (double value) => newdoubleValue.add(value * 2));
 }
 
-void listOperations(List<int> list, void Function(int) operation) {
+void listOperations(List<int> list, void Function(int) operation) {//passing a function as a parameter and the function takes an integer as a parameter
   for (var item in list) {
     operation(item);
   }
